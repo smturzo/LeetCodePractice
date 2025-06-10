@@ -1,4 +1,4 @@
-def merge(nums1, m, nums2, n):
+def merge_sorted_array(nums1, m, nums2, n):
     # Initialize pointers
     p1, p2, p = m - 1, n - 1, m + n - 1
 
@@ -22,12 +22,8 @@ def merge(nums1, m, nums2, n):
         p -= 1
         print('p2 >=0, p is',p)
 
+# Inputs
 nums1, m, nums2, n = [1,2,3,0,0,0], 3, [2,5,6], 3
-merge(nums1, m, nums2, n)
-print(nums1)  # Output: [1, 2, 2, 3, 5, 6]
 
-nproblems = 3
-attempts = 10
-for i in range(nproblems * attempts):
-    print(i // attempts, i % attempts, i)
-    #print(i//10, i %10, i)
+merge_sorted_array(nums1, m, nums2, n)
+print(nums1)  # Output: [1, 2, 2, 3, 5, 6]
